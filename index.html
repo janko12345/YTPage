@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>YouTube</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo-bars">
+            <i class="fas fa-bars"></i>
+            <img id="logo"
+                src="data:image/png;base64,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"
+                alt="logo">
+        </div>
+        <div id="search">
+            <input class="search-input" type="text" placeholder="Search">
+            <i id="search-icon" class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <div id="right-icons">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            <i class="fas fa-bars"></i>
+            <i class="fa fa-bell" aria-hidden="true"></i>
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <iframe width="978" height="611" src="https://www.youtube.com/embed/V74l_zS1x8E" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <section class="video-info">
+                <div class="video-primary-info">
+                    <h2 class="title">Contributing to Open Source Part I: The Easy Way</h2>
+                    <div class="statistics">
+                        <p class="views-and-date">58 589 views • 27. 2. 2014</p>
+                        <div class="interactivity">
+                            <button class="interactivity-btns icon-btns">
+                                <i class="fa fa-thumbs-up" aria-hidden="true">
+                                    <span>429</span>
+                                </i>
+
+
+                            </button>
+                            <button class="interactivity-btns icon-btns"><i class="fa fa-thumbs-down"
+                                    aria-hidden="true"> <span>19</span></i>
+                            </button>
+                            <button class="interactivity-btns icon-btns"><i class="fa fa-share" aria-hidden="true">
+                                    <span>share</span></i>
+                            </button>
+                            <button class="interactivity-btns icon-btns"><i class="fas fa-bars">
+                                    <span>save</span></i></button>
+                            <button class="interactivity-btns icon-btns"><i class="fa fa-ellipsis-h"
+                                    aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-secondary-info">
+                    <div class="video-secondary-info__header">
+                        <div class="author"><a href="#"><img class="profile-img"
+                                    src="https://yt3.ggpht.com/a/AATXAJyfp0akR7PCq72FcsHL1DrLUbzqKet6_ZK6Nw=s48-c-k-c0xffffffff-no-rj-mo"
+                                    alt="profile img"></a>
+
+                            <div class="author-info">
+                                <h4 class="author-name">The Odin Project</h4>
+                                <p class="secondary-info text-13">1 th. subscribers</p>
+                            </div>
+                        </div>
+                        <button class="subscribe-btn">SUBSCRIBE</button>
+                    </div>
+                    <div class="video-description">
+                        <p class="description">How do you contribute to open source? In this video, I'll describe the
+                            easiest way to make a
+                            simple contribution to an open source project -- without using the command line, a text
+                            editor, "forking a repo", or even touching Git outside of Github. I'll also describe what
+                            kinds of contributions open </p>
+                        <p><a class="secondary-info text-13">SEE MORE</a></p>
+                    </div>
+                </div>
+            </section>
+            <section class="comment-section">
+                <div class="comment-section__header">
+                    <div class="number-of-comments-and-sort-by">
+                        <span class="number-of-comments">15 comments</span>
+                        <button class="interactivity-btns icon-btns"><i class="fa fa-sort" aria-hidden="true"> <span>
+                                    SORT
+                                    BY
+                                </span></i></button>
+                    </div>
+                    <div class="my-comment">
+                        <img class="profile-img comment-profile-img"
+                            src="https://lh5.googleusercontent.com/-dA96BAdlPPg/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuclrFqCMuP0CZgJGWnD0sQV7zyBH3Q/s88/photo.jpg"
+                            alt="my profile logo">
+                        <input class="my-comment-input" type="text" placeholder="Add public comment...">
+                    </div>
+                    <div class="upload-comment">
+                        <button id="cancel-btn" class="interactivity-btns icon-btns">CANCEL</button>
+                        <button class="upload-comment-btn">COMMENT</button>
+                    </div>
+                </div>
+                <div class="comment-section__body">
+                    <div class="user-contribution">
+                        <a class="user-img-container" href="#">
+                            <img class="profile-img comment-profile-img"
+                                src="https://yt3.ggpht.com/a/AATXAJwsPwwwTp7EvQU8V5yIhveenyEtGhz0JmO4TV9a3Q=s48-c-k-c0xffffffff-no-rj-mo"
+                                alt="user-img">
+                        </a>
+                        <div class="user-comment-container">
+                            <div class="user-comment-header">
+                                <h5 class="user-name"><a href="#">Wing N.</a></h5>
+                                <p class="secondary-info text-13">2 years ago</p>
+                            </div>
+                            <p class="user-comment-content">"use your powers for good" haha
+                                thank you for the video.</p>
+                            <div class="user-comment-statistics">
+                                <button class="comment-interactivity-btns interactivity-btns icon-btns"><i
+                                        class="fa fa-thumbs-up" aria-hidden="true"><span> 17</span></i></button>
+                                <button class="comment-interactivity-btns interactivity-btns icon-btns"><i
+                                        class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+                                <button
+                                    class="comment-interactivity-btns interactivity-btns icon-btns"><span>REPLY</span></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="user-contribution">
+                        <a class="user-img-container" href="#">
+                            <img class="profile-img comment-profile-img"
+                                src="https://yt3.ggpht.com/a/AATXAJyAWDYEF9JuGL9GkfkerUGPsoyYV8i54HCiZA=s48-c-k-c0xffffffff-no-rj-mo"
+                                alt="user-img">
+                        </a>
+                        <div class="user-comment-container">
+                            <div class="user-comment-header">
+                                <h5 class="user-name"><a href="#">andrewscheuermann05</a></h5>
+                                <p class="secondary-info text-13">5 years ago</p>
+                            </div>
+                            <p class="user-comment-content">FYI: the edit button has changed to a diagonal pencil</p>
+                            <div class="user-comment-statistics">
+                                <button class="comment-interactivity-btns interactivity-btns icon-btns"><i
+                                        class="fa fa-thumbs-up" aria-hidden="true"><span> 2</span></i></button>
+                                <button class="comment-interactivity-btns interactivity-btns icon-btns"><i
+                                        class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+                                <button
+                                    class="comment-interactivity-btns interactivity-btns icon-btns"><span>REPLY</span></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="user-contribution">
+                        <a class="user-img-container" href="#">
+                            <img class="profile-img comment-profile-img"
+                                src="https://yt3.ggpht.com/a/AATXAJy0-ooEIunZ9qE-HMsXsSHnZ3oAU49Kxg8-I7RmHQ=s48-c-k-c0xffffffff-no-rj-mo"
+                                alt="user-img">
+                        </a>
+                        <div class="user-comment-container">
+                            <div class="user-comment-header">
+                                <h5 class="user-name"><a href="#">Luyi Ren</a></h5>
+                                <p class="secondary-info text-13">2 years ago</p>
+                            </div>
+                            <p class="user-comment-content">Your video helped me try to make my first contribution!
+                                Thank you so much!</p>
+                            <div class="user-comment-statistics">
+                                <button class="comment-interactivity-btns interactivity-btns icon-btns"><i
+                                        class="fa fa-thumbs-up" aria-hidden="true"><span></span></i></button>
+                                <button class="comment-interactivity-btns interactivity-btns icon-btns"><i
+                                        class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+                                <button
+                                    class="comment-interactivity-btns interactivity-btns icon-btns"><span>REPLY</span></button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="user-contribution">
+                        <a class="user-img-container" href="#">
+                            <img class="profile-img comment-profile-img"
+                                src="https://yt3.ggpht.com/a/AATXAJxL4K8JvBh5AnUuuaraFXPb9XL42BI4uU4GnpOwzg=s48-c-k-c0xffffffff-no-rj-mo"
+                                alt="user-img">
+                        </a>
+                        <div class="user-comment-container">
+                            <div class="user-comment-header">
+                                <h5 class="user-name"><a href="#">Fer Del Valle</a></h5>
+                                <p class="secondary-info text-13">10 months ago</p>
+                            </div>
+                            <p class="user-comment-content">Awesome, thanks</p>
+                            <div class="user-comment-statistics">
+                                <button class="comment-interactivity-btns interactivity-btns icon-btns"><i
+                                        class="fa fa-thumbs-up" aria-hidden="true"><span></span></i></button>
+                                <button class="comment-interactivity-btns interactivity-btns icon-btns"><i
+                                        class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+                                <button
+                                    class="comment-interactivity-btns interactivity-btns icon-btns"><span>REPLY</span></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+        <aside>
+            <div class="next-video-container">
+                <div class="next-video-header">
+                    <p class="next">Next</p>
+                    <div class="autoplay">
+                        <p>Autoplay</p>
+                        <div class="autoplay-tool">
+                            <div class="autoplay-btn"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommended-video">
+                    <img src="https://i.ytimg.com/vi/YJZCUhxNCv8/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDYTd-JbP3ASPgWmsNFosYIVR-NgA"
+                        alt="guy teaching">
+                    <div class="recommended-video__description">
+                        <h5 class="recommended-video__title">'How to Get a Job at the Big 4 - Amazon, Facebook, Google
+                            &...</h5>
+                        <p class="recommended-video__author secondary-info text-13">SJ Tech</p>
+                        <p class="recommended-video__info secondary-info text-13">1,2 mil. views • 5 years ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/mENDYhfxH-o/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLCkfVRy7wF7AcX32H5fDmMUamnDZA"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">Contributing to Open Source Part II: The Real Way</h5>
+                    <p class="recommended-video__author secondary-info text-13">The Odin Project</p>
+                    <p class="recommended-video__info secondary-info text-13">36 th. views • 6 years ago</p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/1D4FzPcEiN4/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLAX8Zb0ITev84k8LboBW-DrMBPHXw"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">Your Mobile Navigations STINK! Better UX AWAITS! </h5>
+                    <p class="recommended-video__author secondary-info text-13">DesignCourse</p>
+                    <p class="recommended-video__info secondary-info text-13">128 th. views • 5 months ago</p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/Q-BpqyOT3a8/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLCRQfULOD4ZVw_5xWg-ysv_vW9Xlg"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">What Is A RESTful API? Explanation of REST & HTTP </h5>
+                    <p class="recommended-video__author secondary-info text-13">Traversy Media</p>
+                    <p class="recommended-video__info secondary-info text-13">1 mil. views • 3 years ago</p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/NdA6aQR-s4U/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDPPYbVRISmLDarW1XBWAaJHQ9vmQ"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">Why Do So Many Programmers Lose Hope? </h5>
+                    <p class="recommended-video__author secondary-info text-13">Healthy Software Developer</p>
+                    <p class="recommended-video__info secondary-info text-13">232 th. views • 2 years ago</p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/5qF_qbaWt3Q/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBCyo-UbRP4UrLWI8b_zVaxvDD5fg"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">Waiting For The End (Official Video) - Linkin Park </h5>
+                    <p class="recommended-video__author secondary-info text-13">Linkin Park</p>
+                    <p class="recommended-video__info secondary-info text-13">Recommended for you</p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/PoRJizFvM7s/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBtDFopjGfDeBpVb4ZpQ1u5GjW_oQ"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">Async JS Crash Course - Callbacks, Promises, Async .. </h5>
+                    <p class="recommended-video__author secondary-info text-13">Traversy Media</p>
+                    <p class="recommended-video__info secondary-info text-13">543 th. views • 2 years ago</p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/8aGhZQkoFbQ/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLASWnNQ3Oq6Fa9QkCAJMm8YtSP-9w"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">What the heck is the event loop anyway? | Philip Roberts |...
+                    </h5>
+                    <p class="recommended-video__author secondary-info text-13">Healthy Software Developer</p>
+                    <p class="recommended-video__info secondary-info text-13">1,4 mil. views • 5 years ago</p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/eJnQBXmZ7Ek/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBlini2twcPlU9oHNKWzCTc8z0OzA"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">twenty one pilots - Chlorine (Official Video)</h5>
+                    <p class="recommended-video__author secondary-info text-13">twenty one pilots</p>
+                    <p class="recommended-video__info secondary-info text-13"> Recommended for you
+                    </p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/UyoXKGQrmtY/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBT7PwVVPOqZnZlgS_ctzkyNtO_xg"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">How to Design a Logo - Full Identity Design Course</h5>
+                    <p class="recommended-video__author secondary-info text-13">DesignCourse</p>
+                    <p class="recommended-video__info secondary-info text-13">Recommended for you</p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/Zz9pMKy9Mbs/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBUmnGW0L5rGO2I2VNQYQhY-89MPA"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">How to Repair a DEAD Computer</h5>
+                    <p class="recommended-video__author secondary-info text-13">CareyHolzman</p>
+                    <p class="recommended-video__info secondary-info text-13">Recommended for you
+                    </p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/dxytyRy-O1k/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBf89qJdBIaAm-Xy8wuAU3PQ6g9IA"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">BURN IT DOWN (Official Video) - Linkin Park</h5>
+                    <p class="recommended-video__author secondary-info text-13">Linkin Park</p>
+                    <p class="recommended-video__info secondary-info text-13">Recommended for you</p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/_TLhUCjY9iA/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLCyOly6kKeAEZPMpXEuMZZsJGaVqg"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">Learn Angular 8 from Scratch for Beginners - Crash Course</h5>
+                    <p class="recommended-video__author secondary-info text-13">DesignCourse</p>
+                    <p class="recommended-video__info secondary-info text-13">227 th. views • 1 year ago</p>
+                </div>
+            </div>
+            <div class="recommended-video">
+                <img src="https://i.ytimg.com/vi/S-AGE8rDs3Q/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLBZnNyXPVdjMske9yVPMGBRQB-0Ng"
+                    alt="recommended video">
+                <div class="recommended-video__description">
+                    <h5 class="recommended-video__title">Developer Reacts To Terrible Websites</h5>
+                    <p class="recommended-video__author secondary-info text-13">Dev Ed</p>
+                    <p class="recommended-video__info secondary-info text-13">227 th. views • 11 months ago</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>
